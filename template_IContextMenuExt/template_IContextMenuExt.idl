@@ -1,0 +1,34 @@
+// template_IContextMenuExt.idl : template_IContextMenuExt 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(template_IContextMenuExt.tlb)和封送处理代码。
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(632603BC-907F-4655-B04F-2C1F8B52D70D),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IContextMenuExt : IDispatch{
+};
+[
+	uuid(D6BC1244-B393-43B1-8E92-DE0BA727BB3D),
+	version(1.0),
+]
+library template_IContextMenuExtLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(49A4CD72-02F5-47BB-B7C4-A4C6848948E7)		
+	]
+	coclass ContextMenuExt
+	{
+		[default] interface IContextMenuExt;
+	};
+};
+
